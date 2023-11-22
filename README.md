@@ -1,4 +1,41 @@
 ﻿# SharifSoftwareLab4
+## بخش اول
+### مقدمه
+یکی از مسادل رایج در برنامه ها نسبت دادن حالات مختلف به اشیا (مانند Finite State Machines( و جابه جایی میان آنها هنگام اجرای برنامه است. این رفتار که عموما به صورت حلقه ها و جملات شرطی مانند switch-case یا if پیاده سازی میشوند، اغلب گسترش پذیر نیستند و یا با افزایش تعداد حالات پیجیده میشوند. در نتیجه می توان از الگوی State و Strategy برای پیادهسازی این رفتار استفاده کرد.
+### States
+در مسئله فوق 2 حالت برای هر بسته پستی وجود دارد: Delivered و In-Transit. برای پیاده سازی این دوحالت ابتدا لازم است تا یک واسط مشترک به صورت زیر برای آنها تعریف کنیم:
+
+![image](https://github.com/kamayrtaeb/SharifSoftwareLab4/assets/59438691/7ca51443-47ac-4ed7-8c02-4d0ea81dc30f)
+
+سپس برای هر حالت یک کلاس تعریف کرده تا واسط فوق را پیاده سازی کنند:
+
+![image](https://github.com/kamayrtaeb/SharifSoftwareLab4/assets/59438691/4d334ff8-b0dc-478c-bb75-809fb86af5ba)
+![image](https://github.com/kamayrtaeb/SharifSoftwareLab4/assets/59438691/1700011a-0e24-4a8a-9387-b6f493f50d7c)
+
+### Strategies:
+میتوان در این مسئله نحوه ارسال را به عنوان استراتژی های مختلف در نظر گرفت. بدین منظور ابتدا یک واسط تعریف می کنیم:
+
+![image](https://github.com/kamayrtaeb/SharifSoftwareLab4/assets/59438691/e672dd9f-5890-4345-9bf1-5f43d51e8677)
+
+سپس برای هر استراتژی و نحوه محاسبه قیمت یک کلاس تعریف و پیاده سازی میکنیم:
+
+![image](https://github.com/kamayrtaeb/SharifSoftwareLab4/assets/59438691/54435838-3cf0-4c5c-b1fe-258c1d72fbc4)
+![image](https://github.com/kamayrtaeb/SharifSoftwareLab4/assets/59438691/13807aaf-52e6-45e0-b34d-63b5ebdd9348)
+
+
+### Mail
+حال کلاس اصلی Mail را پیاده سازی میکنیم. همانظور که مشخص است هر شی از این کلاس دارای یک State و یک Strategy است که قابل تغییر میباشد:
+
+![image](https://github.com/kamayrtaeb/SharifSoftwareLab4/assets/59438691/e091103f-c3df-471e-bd0b-e2ebd0d164c0)
+### برنامه اصلی
+در تصاویر زیر پیاده سازی منطق اصلی و یک نمونه از اجرای آن را مشاهده میکنید. همانطور که مشخص است به راحتی می توان حالت و استراتژی آبجکت فوق را تغییر داد:
+
+![image](https://github.com/kamayrtaeb/SharifSoftwareLab4/assets/59438691/3acf98cb-f48d-4284-a42c-5a8b33242f0a)
+![image](https://github.com/kamayrtaeb/SharifSoftwareLab4/assets/59438691/d063e76f-8666-4c41-af87-6264e76d0e45)
+
+
+
+ 
 1)الگوهای طراحی در کتاب "Design Patterns: Elements of Reusable Object-Oriented Software" از گروه چهارچوب‌های عظیم (Gang of Four) به سه دسته اصلی تقسیم می‌شوند:
 
 1. **الگوهای ساختاری (Structural Patterns):**
